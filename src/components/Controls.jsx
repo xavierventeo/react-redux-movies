@@ -6,12 +6,13 @@ import { getPopularMoviesAction, getSearchMoviesAction } from '../actions/movies
 class Controls extends React.Component {
     constructor(props) {
         super(props); 
-        this.state = { fieldSearchCriteria: ""};
+        this.state = { fieldSearchCriteria: "jurasic"};
     };
 
     searchMovies() {
-        if (document.getElementById("search").value ) {
-            this.props.getSearchMovies(document.getElementById("search").value);
+        this.state.fieldSearchCriteria = document.getElementById("search").value;
+        if (this.state.fieldSearchCriteria) {
+            this.props.getSearchMovies(this.state.fieldSearchCriteria);
         }
         this.state.fieldSearchCriteria = "";
     }

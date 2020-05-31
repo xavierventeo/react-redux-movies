@@ -6,6 +6,8 @@ const initialState = {
 }
     
 function reducer(state = initialState, action) {
+    console.log("reducer");
+    console.log(action);
     switch (action.type) {
         case actionDispatch.SHOW_GENRES:
             return {
@@ -19,7 +21,7 @@ function reducer(state = initialState, action) {
                 movies: action.payload,
             };
 
-        case actionDispatch.GET_SEARCH_MOVIES:
+        case actionDispatch.GET_SEARCH_MOVIES: 
             return {
                 ...state,
                 movies: action.payload,
