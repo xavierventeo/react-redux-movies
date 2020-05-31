@@ -14,9 +14,8 @@ class Controls extends React.Component {
         if (this.state.fieldSearchCriteria) {
             this.props.getSearchMovies(this.state.fieldSearchCriteria);
         }
-        this.state.fieldSearchCriteria = "";
+        document.getElementById("search").value = "";
     }
-    
 
     render() {
         return (
