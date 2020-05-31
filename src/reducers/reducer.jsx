@@ -15,13 +15,7 @@ function reducer(state = initialState, action) {
                 genres: action.payload,
             };
 
-        case actionDispatch.GET_POPULAR_MOVIES:
-            return {
-                ...state,
-                movies: action.payload,
-            };
-
-        case actionDispatch.GET_SEARCH_MOVIES: 
+        case actionDispatch.SHOW_MOVIES:
             return {
                 ...state,
                 movies: action.payload,

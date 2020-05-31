@@ -8,7 +8,7 @@ export const getPopularMoviesAction = async (dispatch) => {
         const movies = await res.data.results.slice(0, 10);
 
         return dispatch({
-            type: actionDispatch.GET_POPULAR_MOVIES,
+            type: actionDispatch.SHOW_MOVIES,
             payload: movies, 
         });
     } catch (error) {
@@ -23,7 +23,7 @@ export const getSearchMoviesAction = async (dispatch, searchCriteria) => {
         console.log(movies);
 
         return dispatch({
-            type: actionDispatch.GET_SEARCH_MOVIES,
+            type: actionDispatch.SHOW_MOVIES,
             payload: movies, 
         });
     } catch (error) {
