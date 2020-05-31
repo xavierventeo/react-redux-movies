@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
 class MoviesList extends Component {
-    constructor(props) {
-        super(props); 
-    }
 
     render() {
         return (

@@ -8,7 +8,7 @@ class Controls extends React.Component {
         return (
             <div className="nav-principal">
                 <div>
-                    <a key="butPoppularMovies" onClick={() => this.props.getPopularMovies} href="/#">Películas Populares</a>
+                    <a key="butPoppularMovies" onClick={() => this.props.getPopularMovies()} href="/#">Películas Populares</a>
                 </div>
                 <div className="search">
                     <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search"/>
