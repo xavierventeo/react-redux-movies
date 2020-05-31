@@ -1,11 +1,15 @@
 import React from 'react';
-import './App.css';
+import { Provider } from 'react-redux';
+import store from './store/store'
+import Controls from './components/Controls'
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      Movies
-    </div>
+      <Provider store={store}>
+        <Controls/>
+      </Provider>
   );
 }
 
