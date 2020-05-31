@@ -6,7 +6,7 @@ export const getPopularMoviesAction = async (dispatch) => {
     try {
         const res = await axios.get(`${API_URL}/movie/popular?api_key=${API_KEY}&language=es-ES`);
         console.log(res);
-        const movies = await res.data.results;
+        const movies = await res.data.results.slice(0, 10);
         console.log(movies);
 
         return dispatch({
