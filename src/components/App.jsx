@@ -1,14 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from '../store/store'
-import Controls from './Controls'
-
-
+import Header from './Header'
 
 const App = () => {
   return (
       <Provider store={store}>
-        <Controls/>
+        <Header/>
       </Provider>
   );
 }
