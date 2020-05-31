@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { showGenresAction } from '../actions/genresAction';
-
 
 class MoviesList extends Component {
     constructor(props) {

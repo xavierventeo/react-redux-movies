@@ -1,5 +1,4 @@
 import React from 'react';
-import Genres from './Genres';
 
 class Controls extends React.Component {
     constructor(props) {
@@ -7,7 +6,21 @@ class Controls extends React.Component {
     }
 
     render() {
-        return <div>Hello movies<Genres/></div>;
+        return (
+            <div className="nav-principal">
+                <div>
+                    <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li className="nav-item">
+                            <a className="nav-link" onClick="getPopularMovies()">Películas Populares</a>
+                        </li>
+                    </ul>        
+                </div>
+                <div className="search">
+                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search"/>
+                    <button className="btn btn-outline-success" onClick="getFindMovies()">Buscar&nbsp;Películas</button>
+                </div>
+            </div>            
+        );
     }
 }
 export default Controls;
