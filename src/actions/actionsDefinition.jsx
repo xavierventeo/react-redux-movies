@@ -1,0 +1,5 @@
+export const actionDispatch = {
+    SHOW_GENRES: "SHOW_GENRES",
+    GET_POPULAR_MOVIES: "GET_POPULAR_MOVIES",
+    SEARCH_MOVIES: "SEARCH_MOVIES"
+}

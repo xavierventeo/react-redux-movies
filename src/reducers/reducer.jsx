@@ -1,3 +1,5 @@
+import {actionDispatch} from './../actions/actionsDefinition';
+
 const initialState = {
     genres: [],
     movies:[]
@@ -5,7 +7,7 @@ const initialState = {
     
 function reducer(state = initialState, action) {
     switch (action.type) {
-        case 'SHOW_GENRES':
+        case actionDispatch.SHOW_GENRES:
             return {
                 ...state,
                 genres: action.payload,

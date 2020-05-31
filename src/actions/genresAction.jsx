@@ -1,6 +1,6 @@
 import {API_KEY, API_URL} from '../properties'
+import {actionDispatch} from './actionsDefinition';
 import axios from 'axios'
-export const SHOW_GENRES = 'SHOW_GENRES';
 
 export const showGenresAction = async (dispatch) => {
     try {
@@ -10,7 +10,7 @@ export const showGenresAction = async (dispatch) => {
         console.log(genres);
 
         return dispatch({
-            type: SHOW_GENRES,
+            type: actionDispatch.SHOW_GENRES,
             payload: genres, 
         });
     } catch (error) {
