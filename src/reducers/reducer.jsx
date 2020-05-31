@@ -19,6 +19,12 @@ function reducer(state = initialState, action) {
                 movies: action.payload,
             };
 
+        case actionDispatch.GET_SEARCH_MOVIES:
+            return {
+                ...state,
+                movies: action.payload,
+            };
+        
         default:
             return state;
     }
