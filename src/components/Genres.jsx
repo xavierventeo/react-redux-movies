@@ -6,18 +6,14 @@ import { showGenresAction } from '../actions/genresAction';
 class Genres extends Component {
     constructor(props) {
         super(props); 
+        this.state = { genres: this.props.showGenres() };
     }
-
-    componentDidMount() {
-        //Aquí hacer llamada al action
-        this.props.showGenres();
-    }   
 
     render() {
         return (
-            <div>
+            <div className="nav-genres">
                 { (this.props.genres).map( (genre) => (
-                    <div>{genre.name}</div> 
+                    <button key={genre.name} className="btn btn-primary my-2 my-sm-0" onClick={() => this.props.getMoviesByGender(genre.id)}>{genre.name}</button>
                 ))}
             </div>
         );

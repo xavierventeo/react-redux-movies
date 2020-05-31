@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.movies{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  flex-wrap: wrap;
+}
+  
+.movie {
+  flex-direction: column;
+  padding: 0.5em;
+  cursor: pointer;
+}
+.movie h3 {
+  width: 185px
+}
