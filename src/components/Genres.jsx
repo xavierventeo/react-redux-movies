@@ -6,12 +6,8 @@ import { showGenresAction } from '../actions/genresAction';
 class Genres extends Component {
     constructor(props) {
         super(props); 
+        this.state = { genres: this.props.showGenres() };
     }
-
-    componentDidMount() {
-        //Aquí hacer llamada al action
-        this.props.showGenres();
-    }   
 
     render() {
         return (
