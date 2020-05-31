@@ -5,9 +5,7 @@ import axios from 'axios'
 export const showGenresAction = async (dispatch) => {
     try {
         const res = await axios.get(`${API_URL}/genre/movie/list?api_key=${API_KEY}&language=es-ES`);
-        console.log(res);
         const genres = await res.data.genres;
-        console.log(genres);
 
         return dispatch({
             type: actionDispatch.SHOW_GENRES,

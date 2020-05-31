@@ -13,7 +13,7 @@ class Genres extends Component {
         return (
             <div className="nav-genres">
                 { (this.props.genres).map( (genre) => (
-                    <button class="btn btn-primary my-2 my-sm-0" onClick={() => this.props.getMoviesByGender(genre.id)}>{genre.name}</button>
+                    <button key={genre.name} className="btn btn-primary my-2 my-sm-0" onClick={() => this.props.getMoviesByGender(genre.id)}>{genre.name}</button>
                 ))}
             </div>
         );

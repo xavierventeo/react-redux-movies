@@ -13,6 +13,12 @@ function reducer(state = initialState, action) {
                 genres: action.payload,
             };
 
+        case actionDispatch.GET_POPULAR_MOVIES:
+            return {
+                ...state,
+                movies: action.payload,
+            };
+
         default:
             return state;
     }
