@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap';
 import { getPopularMoviesAction, getSearchMoviesAction } from '../actions/moviesAction';
+import Genres from './Genres' 
 
 
 class Controls extends React.Component {
@@ -14,15 +16,20 @@ class Controls extends React.Component {
 
     render() {
         return (
-            <div className="nav-principal">
-                <div>
-                    <a key="butPoppularMovies" onClick={() => this.props.getPopularMovies()} href="/#">Películas Populares</a>
-                </div>
-                <div className="search">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search"/>
-                    <button className="btn btn-outline-success rounded-pill" onClick={() => this.searchMovies()}>Buscar&nbsp;Películas</button>
-                </div>
-            </div>            
+            <Navbar bg="light" expand="lg">
+                <Navbar.Brand href="#home">Movies</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="" onClick={() => this.props.getPopularMovies()}>Top 10 Películas Populares</Nav.Link>
+                        <Genres/>
+                    </Nav>
+                    <Form inline>
+                        <FormControl type="text" placeholder="Search" className="mr-sm-2" id="search"/>
+                        <Button variant="outline-success" onClick={() => this.searchMovies()}>Buscar&nbsp;Películas</Button>
+                    </Form>
+                </Navbar.Collapse>
+            </Navbar>
         );
     }
 }
