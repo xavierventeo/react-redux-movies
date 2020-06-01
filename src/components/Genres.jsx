@@ -27,7 +27,7 @@ const mapStateToProps = (state) => ({
     
 const mapDispatchToProps = (dispatch) => ({
     showGenres : () => showGenresAction(dispatch),
-    getMoviesByGenderAction : (genreID) => getMoviesByGenderAction(dispatch, genreID) 
+    getMoviesByGender : (genreID) => getMoviesByGenderAction(dispatch, genreID) 
 });
 
 const connectedGenres = connect(mapStateToProps, mapDispatchToProps)(Genres);
