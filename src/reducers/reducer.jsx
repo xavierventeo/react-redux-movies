@@ -6,8 +6,6 @@ const initialState = {
 }
     
 function reducer(state = initialState, action) {
-    console.log("reducer");
-    console.log(action);
     switch (action.type) {
         case actionDispatch.SHOW_GENRES:
             return {

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { showGenresAction } from '../actions/genresAction';
+import { getMoviesByGenderAction } from '../actions/moviesAction';
 
 
 class Genres extends Component {
@@ -25,7 +26,8 @@ const mapStateToProps = (state) => ({
 });
     
 const mapDispatchToProps = (dispatch) => ({
-    showGenres : () => showGenresAction(dispatch)
+    showGenres : () => showGenresAction(dispatch),
+    getMoviesByGenderAction : (genreID) => getMoviesByGenderAction(dispatch, genreID) 
 });
 
 const connectedGenres = connect(mapStateToProps, mapDispatchToProps)(Genres);
