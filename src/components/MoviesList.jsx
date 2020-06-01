@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import './MoviesList.css';
-import { Container, Row, Col} from 'react-bootstrap';
+import { Container, Row, Col, Card} from 'react-bootstrap';
 
 
 class MoviesList extends Component {
@@ -12,10 +12,12 @@ class MoviesList extends Component {
                 <Row>
                 { (this.props.movies).map( (movie) => (
                     <Col lg={3} md={4} sm={6} xs={12}> 
-                        <img className="card-img-top"  src={`http://image.tmdb.org/t/p/w185${movie.poster_path}`} alt={`Poster of ${movie.title}`}/>    
-                        <div className="card-body">
-                            <h3 className="card-title">{movie.title}</h3>  
-                        </div>
+                        <Card className="bg-dark text-white">
+                            <Card.Body>
+                                <Card.Title>{movie.title}</Card.Title>
+                            </Card.Body>
+                            <Card.Img variant="top" src={`http://image.tmdb.org/t/p/w185${movie.poster_path}`} />
+                        </Card>
                     </Col>
                 ))}
                 </Row>
