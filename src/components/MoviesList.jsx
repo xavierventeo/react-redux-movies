@@ -7,7 +7,10 @@ class MoviesList extends Component {
         return (
             <div className="movies">
                 { (this.props.movies).map( (movie) => (
-                    <div>{movie.title}</div>
+                    <div className="movie">
+                        <img src={`http://image.tmdb.org/t/p/w185${movie.poster_path}`} />    
+                        <h3>{movie.title}</h3>  
+                    </div>
                 ))}
             </div>
         );
