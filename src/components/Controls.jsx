@@ -20,7 +20,7 @@ class Controls extends React.Component {
                 </div>
                 <div className="search">
                     <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search"/>
-                    <button className="btn btn-outline-success" onClick={() => this.searchMovies()}>Buscar&nbsp;Películas</button>
+                    <button className="btn btn-outline-success rounded-pill" onClick={() => this.searchMovies()}>Buscar&nbsp;Películas</button>
                 </div>
             </div>            
         );
