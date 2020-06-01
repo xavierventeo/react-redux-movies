@@ -5,6 +5,8 @@ import store from '../store/store'
 import Header from './Header'
 import MoviesList from './MoviesList'
 import MovieDetail from './MovieDetail'
+import Error404 from './Error404'
+
 
 const App = () => {
   return (
@@ -20,6 +22,7 @@ const App = () => {
             </Route>
             <Route path="/movie/:id" component={MovieDetail}>
             </Route>
+            <Route component={Error404}/>
           </Switch>
         </BrowserRouter> 
       </Provider>
