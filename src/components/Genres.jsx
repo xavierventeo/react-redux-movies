@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import './Genres.css';
 import { showGenresAction } from '../actions/genresAction';
 import { getMoviesByGenderAction } from '../actions/moviesAction';
+import { NavDropdown} from 'react-bootstrap';
 
 
 class Genres extends Component {
@@ -12,11 +14,11 @@ class Genres extends Component {
 
     render() {
         return (
-            <div className="nav-genres">
+            <NavDropdown title="Filtrar por Género" id="basic-nav-dropdown">
                 { (this.props.genres).map( (genre) => (
-                    <button key={genre.name} className="btn btn-primary my-2 my-sm-0" onClick={() => this.props.getMoviesByGender(genre.id)}>{genre.name}</button>
+                    <NavDropdown.Item key={genre.id} href="#" onClick={() => this.props.getMoviesByGender(genre.id)}>{genre.name}</NavDropdown.Item>
                 ))}
-            </div>
+            </NavDropdown>
         );
     }
 }

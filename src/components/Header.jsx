@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './Header.css';
 import Controls from './Controls' 
-import Genres from './Genres' 
 
 class Header extends Component {
 
@@ -9,7 +8,6 @@ class Header extends Component {
         return (
             <header className="header">
                 <Controls/>
-                <Genres/>
             </header>
         );
     }

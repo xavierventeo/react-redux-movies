@@ -1,15 +1,27 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import './MoviesList.css';
+import { Container, Row, Col, Card} from 'react-bootstrap';
+
 
 class MoviesList extends Component {
 
     render() {
         return (
-            <div className="movies">
+            <Container>
+                <Row>
                 { (this.props.movies).map( (movie) => (
-                    <div>{movie.title}</div>
+                    <Col lg={3} md={4} sm={6} xs={12}> 
+                        <Card className="bg-dark text-white">
+                            <Card.Body>
+                                <Card.Title>{movie.title}</Card.Title>
+                            </Card.Body>
+                            <Card.Img variant="top" src={`http://image.tmdb.org/t/p/w185${movie.poster_path}`} />
+                        </Card>
+                    </Col>
                 ))}
-            </div>
+                </Row>
+            </Container>
         );
     }
 }
