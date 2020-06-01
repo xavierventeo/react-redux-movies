@@ -12,7 +12,7 @@ class MoviesList extends Component {
             <Container>
                 <Row>
                 { (this.props.movies).map( (movie) => (
-                    <Col lg={3} md={4} sm={6} xs={12}> 
+                    <Col lg={3} md={4} sm={6} xs={12} key={movie.id}> 
                         <Link to={`/movie/${movie.id}`}>
                             <Card className="bg-dark text-white">
                                 <Card.Body>
