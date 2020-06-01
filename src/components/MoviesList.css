@@ -5,12 +5,12 @@
     flex-wrap: wrap;
   }
     
-  .movie {
+.movie {
     flex-direction: column;
     padding: 0.5em;
     cursor: pointer;
   }
-  .movie h3 {
+.movie h3 {
     width: 185px
   }
   
