@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
-import './Header.css';
 import Controls from './Controls' 
+import MoviesList from './MoviesList' 
+import { Container } from 'react-bootstrap';
 
 class Header extends Component {
 
     render() {
         return (
-            <header className="header">
+            <div key="main" id="main">
                 <Controls/>
-            </header>
+                <MoviesList/>
+            </div>
         );
     }
 }
