@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Controls from './Controls' 
 import MoviesList from './MoviesList' 
 
-class Header extends Component {
+class Home extends Component {
 
     render() {
         return (
@@ -14,7 +14,7 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default Home;
 
 
 

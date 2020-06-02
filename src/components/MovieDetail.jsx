@@ -3,6 +3,7 @@ import { Navbar } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { getMovieDetailAction } from '../actions/moviesAction';
 import { Container, Row, Col, Image} from 'react-bootstrap';
+import GoToHome from './GoToHome' 
 import './MovieDetail.css';
 
 const getGenresString = (genreObject) => {
@@ -25,11 +26,7 @@ class MovieDetail extends Component {
 
         return (
             <div key="movie-detail" id="movie-detail">
-                <Navbar bg="light" expand="lg">
-                    <Navbar.Brand href="/">	← Ir a la página principal</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                </Navbar>     
-
+                <GoToHome/>
                 <Container className="bg-dark text-white movie-detail-container">
                     <Row>
                         <Col lg={6} md={6} sm={12} xs={12}>
