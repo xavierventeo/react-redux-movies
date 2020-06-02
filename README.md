@@ -13,7 +13,7 @@ There are two main pages:
 - Click a movie will send to its detail page.
 
 ### Movie detail page
-- List the full movie: poster, title, original title, overview, genres, release date, runtime, vote count and vote average
+- List the full movie: poster, title, original title, overview, genres, release date, runtime, vote count and vote average.
 
 ## Main techniques 🛠
 - React
@@ -40,7 +40,7 @@ Then open `localhost:3000` on browser to see the app.
 $ npx create-react-app react-redux-movies
 $ cd react-redux-movies
 
-2.- Dependencies installed
+2.- Dependencies installed:
 $ npm install react-redux redux # to install redux packages.
 $ npm install bootstrap react-bootstrap # to install bootstrap packages.
 $ npm install react-router-dom # to install react-router-dom packages and manage navegation 
@@ -55,7 +55,7 @@ $ git flow init
 
 ### API Key
 Recommeded to generate your own API on https://www.themoviedb.org/settings/api
-And after that update the API_KEY value on properties.js file
+And after that update the API_KEY value on properties.js file.
 
 ### Genre list
 [/genre/movie/list](https://developers.themoviedb.org/3/genres/get-movie-list)
@@ -68,15 +68,15 @@ When dropdown value changed, it will send another request according to the selec
 
 ### Keyword search
 [/search/movie](https://developers.themoviedb.org/3/search/search-movies)
-After input the keyword, click on search icon to do search. The same input value search by title and original title
+After input the keyword, click on search icon to do search. The same input value search by title and original title.
 
 ### Top 10 most popular movies
 [/movie/popular](https://developers.themoviedb.org/3/movies/get-popular-movies)
-Get the popular movies and filter the API response to get the top 10
+Get the popular movies and filter the API response to get the top 10.
 
 ### Get movie details
 [/movie/${movieId}](https://developers.themoviedb.org/3/movies/get-movie-details)
-Use movieId to get its details. Called from Movie Detail page
+Use movieId to get its details. Called from Movie Detail page.
 
 
 ## Release Notes 📋
