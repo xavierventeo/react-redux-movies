@@ -3,6 +3,7 @@ import { Navbar } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { getMovieDetailAction } from '../actions/moviesAction';
 import { Container, Row, Col, Image} from 'react-bootstrap';
+import './MovieDetail.css';
 
 const getGenresString = (genreObject) => {
     let genreString = "";
@@ -23,26 +24,27 @@ class MovieDetail extends Component {
     render() {
 
         return (
-            <div key="main" id="main">
+            <div key="movie-detail" id="movie-detail">
                 <Navbar bg="light" expand="lg">
                     <Navbar.Brand href="/">	← Ir a la página principal</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 </Navbar>     
 
-                <Container className="bg-dark text-white">
+                <Container className="bg-dark text-white movie-detail-container">
                     <Row>
                         <Col lg={6} md={6} sm={12} xs={12}>
-                        <Image src={`http://image.tmdb.org/t/p/w342${this.props.movieDetail.poster_path}`} rounded />
+                        <Image src={`http://image.tmdb.org/t/p/w342${this.props.movieDetail.poster_path}`} thumbnail />
                         </Col>
                         <Col lg={6} md={6} sm={12} xs={12}>
-                        <div>Título: {this.props.movieDetail.title}</div>
-                <div>Original Title: {this.props.movieDetail.original_title}</div>
-                <div>Overview: {this.props.movieDetail.overview}</div>
-                <div>Número de votos: {this.props.movieDetail.vote_count}</div>
-                <div>Nota media votos: {this.props.movieDetail.vote_average}</div>
-                <div>Fecha de Lanzamiento: {this.props.movieDetail.release_date}</div>
-                <div>Duración: {this.props.movieDetail.runtime} min</div>
-                <div>Género: {getGenresString(this.props.movieDetail.genres)}</div>
+                            <h1>{this.props.movieDetail.title}</h1>
+                            <h3>Título Original: {this.props.movieDetail.original_title}</h3>
+                            <hr></hr>
+                            <p>{this.props.movieDetail.overview}</p>
+                            <p><strong>Género:</strong> {getGenresString(this.props.movieDetail.genres)}</p>
+                            <p><strong>Fecha de Lanzamiento:</strong> {this.props.movieDetail.release_date}</p>
+                            <p><strong>Duración:</strong> {this.props.movieDetail.runtime} min</p>
+                            <p><strong>Número de votos:</strong> {this.props.movieDetail.vote_count}</p>
+                            <p><strong>Nota media votos:</strong> {this.props.movieDetail.vote_average}</p>
                         </Col>
                     </Row>
                 </Container>
