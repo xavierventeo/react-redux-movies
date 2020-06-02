@@ -1,18 +1,19 @@
 
-# react-redux-movies
+# Movies Browser
 
-It is a SPA(Single Page Application) app to browse movies written in React and managing the state by Redux
+It is a SPA(Single Page Application) app to browse movies written in React and managing the state by Redux.
+
 The data is from https://www.themoviedb.org/documentation/api. (Details please see [APIs](#APIs))
 
 There are two main pages:
 
 ### Home page
 - Find movies by: Top 10 most popular, filter by genre and a search box to be able to search by title or original title
-- List of movies with their poster and title (Spanish Language)
-- Click a movie will leads to its detail page.
+- List of movies showing the movie's poster and title (Spanish Language)
+- Click a movie will send to its detail page.
 
 ### Movie detail page
-- List the full movie: poster title, original title, overview, genres, release date, runtime, vote count and vote average
+- List the full movie: poster, title, original title, overview, genres, release date, runtime, vote count and vote average
 
 ## Main techniques 🛠
 - React
@@ -35,7 +36,7 @@ Then open `localhost:3000` on browser to see the app.
 
 ## Project components 📙
 ```bash
-1.-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1.-This project was bootstrapped with Create React App (https://github.com/facebook/create-react-app).
 $ npx create-react-app react-redux-movies
 $ cd react-redux-movies
 
@@ -45,12 +46,16 @@ $ npm install bootstrap react-bootstrap # to install bootstrap packages.
 $ npm install react-router-dom # to install react-router-dom packages and manage navegation 
 $ npm install axios # to install axios packages to manage API calls 
 
-3.- Configure [Git Flow] (https://github.com/nvie/gitflow/wiki/Installation)
+3.- Configure Git Flow (https://github.com/nvie/gitflow/wiki/Installation)
 $ git flow init
 
 ```
 
 ## <a name="APIs">APIs</a> 🕸
+
+### API Key
+Recommeded to generate your own API on https://www.themoviedb.org/settings/api
+And after that update the API_KEY value on properties.js file
 
 ### Genre list
 [/genre/movie/list](https://developers.themoviedb.org/3/genres/get-movie-list)
