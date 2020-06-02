@@ -82,6 +82,7 @@ Use movieId to get its details. Called from Movie Detail page.
 ## Release Notes 📋
 ```bash
 • 1.0.0: First functional release to deliver to GeeksHubsAcademy BootCamp
+• 1.0.1: Clean warning messages
 ```
 
 ## License ⚖️

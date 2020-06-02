@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Navbar } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { getMovieDetailAction } from '../actions/moviesAction';
 import { Container, Row, Col, Image} from 'react-bootstrap';
