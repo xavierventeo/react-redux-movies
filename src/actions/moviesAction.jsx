@@ -46,10 +46,8 @@ export const getMoviesByGenderAction = async (dispatch, genreID) => {
 
 export const getMovieDetailAction = async (dispatch, movieID) => {
     try {
-        console.log(movieID);
         const res = await axios.get(`${API_URL}/movie/${movieID}?api_key=${API_KEY}&language=es-ES`);
         const movie = await res.data;
-        console.log(movie);
 
         return dispatch({
             type: actionDispatch.SHOW_MOVIE_DETAIL,
