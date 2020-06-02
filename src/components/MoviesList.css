@@ -6,7 +6,7 @@
     height: 100px;
 }
 
-.card-img-top {
+.card .card-img-top {
     max-height: 284px;
     max-width: 208px;
     align-self: center;
