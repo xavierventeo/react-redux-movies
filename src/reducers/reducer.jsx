@@ -2,7 +2,8 @@ import {actionDispatch} from './../actions/actionsDefinition';
 
 const initialState = {
     genres: [],
-    movies:[]
+    movies:[],
+    movie: {}
 }
     
 function reducer(state = initialState, action) {
@@ -19,6 +20,14 @@ function reducer(state = initialState, action) {
                 movies: action.payload,
             };
         
+        case actionDispatch.SHOW_MOVIE_DETAIL:
+            console.log("reducer");
+            console.log(action.payload);
+            return {
+                ...state,
+                movie: action.payload,
+            };
+            
         default:
             return state;
     }
