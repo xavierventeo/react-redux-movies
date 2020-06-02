@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { getMovieDetailAction } from '../actions/moviesAction';
 import { Container, Row, Col, Image} from 'react-bootstrap';
 
-
 const getGenresString = (genreObject) => {
     let genreString = "";
     if (genreObject != null) {
@@ -30,7 +29,7 @@ class MovieDetail extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 </Navbar>     
 
-                <Container>
+                <Container className="bg-dark text-white">
                     <Row>
                         <Col lg={6} md={6} sm={12} xs={12}>
                         <Image src={`http://image.tmdb.org/t/p/w342${this.props.movieDetail.poster_path}`} rounded />
