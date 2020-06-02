@@ -2,8 +2,17 @@ import React, {Component} from 'react';
 import { Navbar } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { getMovieDetailAction } from '../actions/moviesAction';
-import { Container, Row, Col, Card} from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 
+
+const getGenresString = (genreObject) => {
+    let genreString = "";
+    if (genreObject != null) {
+        let numGenres = Object.entries(genreObject).length;
+        genreString = Object.entries(genreObject).map((genre, i) => (numGenres-1 === i) ? genre[1].name : genre[1].name+', ');
+    }
+    return genreString;
+}
 
 class MovieDetail extends Component {
     
@@ -13,10 +22,11 @@ class MovieDetail extends Component {
     }   
 
     render() {
+
         return (
             <div key="main" id="main">
                 <Navbar bg="light" expand="lg">
-                    <Navbar.Brand href="/">	← Ir a la página principal  {this.props.movieDetail.title}</Navbar.Brand>
+                    <Navbar.Brand href="/">	← Ir a la página principal</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 </Navbar>     
                 <Card.Img variant="top" src={`http://image.tmdb.org/t/p/w500${this.props.movieDetail.poster_path}`} />
@@ -27,6 +37,7 @@ class MovieDetail extends Component {
                 <div>Nota media votos: {this.props.movieDetail.vote_average}</div>
                 <div>Fecha de Lanzamiento: {this.props.movieDetail.release_date}</div>
                 <div>Duración: {this.props.movieDetail.runtime} min</div>
+                <div>Género: {getGenresString(this.props.movieDetail.genres)}</div>
 
             </div> 
         );
