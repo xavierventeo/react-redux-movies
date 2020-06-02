@@ -7,7 +7,7 @@ class Error404 extends Component {
 
     render() {
         return (
-            <Container>
+            <Container fluid>
                 <h1>Error 404 - Página no encontrada</h1> <Link to="/">Ir a la página principal</Link>
             </Container>
         );
