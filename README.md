@@ -1,68 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# react-redux-movies
 
-In the project directory, you can run:
+It is a SPA(Single Page Application) app to browse movies written in React and managing the state by Redux
+The data is from https://www.themoviedb.org/documentation/api. (Details please see [APIs](#APIs))
 
-### `npm start`
+There are two main pages:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Home page
+- Find movies by: Top 10 most popular, filter by genre and a search box to be able to search by title or original title
+- List of movies with their poster and title (Spanish Language)
+- Click a movie will leads to its detail page.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Movie detail page
+- List the full movie: poster title, original title, overview, genres, release date, runtime, vote count and vote average
 
-### `npm test`
+## Main techniques 🛠
+- React
+- Redux
+- React Bootstrap
+- HTML5 
+- ES6
+- React router dom
+- API 
+- GitFlow
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Run it locally 🖥
+```bash
+$ git clone git@github.com:xavierventeo/react-redux-movies.git
+$ cd react-redux-movies
+$ npm install # to install node packages.
+$ npm start # to run the app in development mode
+```
+Then open `localhost:3000` on browser to see the app.
 
-### `npm run build`
+## Project components 📙
+```bash
+1.-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+$ npx create-react-app react-redux-movies
+$ cd react-redux-movies
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2.- Dependencies installed
+$ npm install react-redux redux # to install redux packages.
+$ npm install bootstrap react-bootstrap # to install bootstrap packages.
+$ npm install react-router-dom # to install react-router-dom packages and manage navegation 
+$ npm install axios # to install axios packages to manage API calls 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+3.- Configure [Git Flow] (https://github.com/nvie/gitflow/wiki/Installation)
+$ git flow init
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+## <a name="APIs">APIs</a> 🕸
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Genre list
+[/genre/movie/list](https://developers.themoviedb.org/3/genres/get-movie-list)
+On home page, get all genres and fill the dropdown element to be able to filter movies by genre.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Search/Filter movies by Genre
+[/discover/movie](https://developers.themoviedb.org/3/discover/movie-discover)
+On home page, after selecting a genre element from dropdown genre list, it dispatch a search. Used param "with_genres" to filter by selected value. 
+When dropdown value changed, it will send another request according to the selection.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Keyword search
+[/search/movie](https://developers.themoviedb.org/3/search/search-movies)
+After input the keyword, click on search icon to do search. The same input value search by title and original title
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Top 10 most popular movies
+[/movie/popular](https://developers.themoviedb.org/3/movies/get-popular-movies)
+Get the popular movies and filter the API response to get the top 10
 
-## Learn More
+### Get movie details
+[/movie/${movieId}](https://developers.themoviedb.org/3/movies/get-movie-details)
+Use movieId to get its details. Called from Movie Detail page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Release Notes 📋
+```bash
+• 1.0.0: First functional release to deliver to GeeksHubsAcademy BootCamp
+```
 
-### Code Splitting
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
