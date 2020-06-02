@@ -44,3 +44,17 @@ export const getMoviesByGenderAction = async (dispatch, genreID) => {
     }
 }
 
+export const getMovieDetailAction = async (dispatch, movieID) => {
+    try {
+        const res = await axios.get(`${API_URL}/movie/${movieID}?api_key=${API_KEY}&language=es-ES`);
+        const movie = await res.data;
+
+        return dispatch({
+            type: actionDispatch.SHOW_MOVIE_DETAIL,
+            payload: movie, 
+        });
+    } catch (error) {
+        console.error(error);
+    }
+}
+
