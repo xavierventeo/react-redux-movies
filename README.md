@@ -1,5 +1,5 @@
 
-# Movies Browser
+# React Redux Movies Browser 🎬
 
 It is a SPA(Single Page Application) app to browse movies written in React and managing the state by Redux.
 
@@ -84,6 +84,6 @@ Use movieId to get its details. Called from Movie Detail page
 • 1.0.0: First functional release to deliver to GeeksHubsAcademy BootCamp
 ```
 
-## License
+## License ⚖️
 [MIT](https://choosealicense.com/licenses/mit/)
 
