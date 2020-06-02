@@ -25,7 +25,7 @@ class Controls extends React.Component {
                         <Genres/>
                     </Nav>
                     <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" id="search"/>
+                        <FormControl type="text" placeholder="Buscar por título" className="mr-sm-2" id="search"/>
                         <Button variant="outline-success" onClick={() => this.searchMovies()}>Buscar&nbsp;Películas</Button>
                     </Form>
                 </Navbar.Collapse>
