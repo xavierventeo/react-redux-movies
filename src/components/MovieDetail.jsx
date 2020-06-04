@@ -8,8 +8,7 @@ import './MovieDetail.css';
 const getGenresString = (genreObject) => {
     let genreString = "";
     if (genreObject != null) {
-        let numGenres = Object.entries(genreObject).length;
-        genreString = Object.entries(genreObject).map((genre, i) => (numGenres-1 === i) ? genre[1].name : genre[1].name+', ');
+        genreString = Object.entries(genreObject).map((genre) => genre[1].name).join(', ');
     }
     return genreString;
 }
